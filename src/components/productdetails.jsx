@@ -1,11 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 
 const ProductDetails = (props) => {
     let id = useParams()
     let productId = id.id
-    let product = props.products.filter((el) => el.id === productId)[0]
+    let products = useSelector((state) => state.products)
+    let product = products.filter((product) => product.id === productId)[0]
     return (
         <React.Fragment> 
         <h1>Details</h1>

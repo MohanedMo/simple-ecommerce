@@ -24,7 +24,7 @@ export const cartSlice = createSlice({
         decreaseCount: (state, action) => {
             let product = {...action.payload}
             product.amount--
-            product.totalprice += product.price
+            product.totalprice -= product.price
             const index = state.findIndex((el) => el.id === product.id);
             state.splice(index,1,product)
         }

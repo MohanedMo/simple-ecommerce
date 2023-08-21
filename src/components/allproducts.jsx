@@ -22,7 +22,7 @@ function addProduct(product){
     dispatch(axiosProducts());
   },);
   return(
-  <div className="row " style={{marginTop: "70px"}}>
+  <div className="d-flex flex-row justify-content-between flex-wrap" style={{marginTop: "70px"}}>
     { products.map((product)=>(
         <div className="col" key={product.id}>
         <div className="card" style={{width: "18rem"}}>

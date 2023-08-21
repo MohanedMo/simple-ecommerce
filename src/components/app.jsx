@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Navbar from "./navbar";
-import Home from "./home";
 import AllProducts from "./allproducts";
 import ErrorPage from "./error-page";
 import ProductDetails from "./productdetails";
@@ -14,15 +13,14 @@ class App extends Component {
       <React.Fragment>
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Home/>}/>
           <Route
-            path="/products"
+            path="/"
             element={
               <AllProducts/>
             }
           >
           </Route>
-            <Route path="/products/:id" element={<ProductDetails/>}/>
+            <Route path="/:id" element={<ProductDetails/>}/>
           <Route
             path="/cart"
             element={

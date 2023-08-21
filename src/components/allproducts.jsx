@@ -28,7 +28,7 @@ function addProduct(product){
         <div className="card" style={{width: "18rem"}}>
         <img style={{height: "300px"}} src={product.picture} className="card-img-top w-100" alt="..." />
         <div className="card-body">
-          <Link to={`/products/${product.id}`}>
+          <Link to={`/${product.id}`}>
             <h5 className="card-title">{product.name}</h5>
           </Link>
           <div className="d-flex mb-2 mt-2 ">
